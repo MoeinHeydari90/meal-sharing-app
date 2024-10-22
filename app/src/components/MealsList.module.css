@@ -1,0 +1,29 @@
+/* src/MealsList.module.css */
+.mealsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 16px;
+}
+
+.mealCard {
+    cursor: pointer; /* Change cursor to pointer */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 8px; /* Optional: Rounded corners */
+    padding: 10px; /* Optional: Padding */
+    transition: box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.mealCard:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.sortControls {
+    margin: 20px; /* Space around the sort controls */
+}
+
+.sortControls select {
+    margin-right: 10px; /* Space between dropdowns */
+    padding: 5px; /* Padding inside the dropdowns */
+    border-radius: 4px; /* Rounded corners */
+}

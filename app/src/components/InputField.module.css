@@ -1,0 +1,22 @@
+/* src/components/InputField.module.css */
+.inputField {
+    margin: 10px 0; /* Space between inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    width: 100%; /* Full width for inputs */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+.inputField:focus {
+    box-shadow:
+        0 0 5px rgba(0, 194, 148, 0.5),
+        0 0 10px rgba(0, 194, 148, 0.3); /* Light shadow */
+    border-color: #00c194; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.inputField:hover {
+    box-shadow: 0 0 10px rgba(0, 194, 148, 0.5); /* Slightly more prominent shadow */
+}

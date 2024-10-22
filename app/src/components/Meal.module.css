@@ -1,0 +1,48 @@
+.mealCard {
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Inner spacing */
+    margin: 16px; /* Outer spacing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White background */
+    transition: transform 0.2s; /* Animation effect */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.mealCard:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.mealTitle {
+    font-size: 1.5em; /* Larger font for title */
+    margin-bottom: 8px; /* Space below title */
+}
+
+.mealDescription {
+    color: #666; /* Gray color for description */
+}
+
+.mealLocation,
+.mealDate,
+.mealPrice {
+    margin-top: 4px; /* Space above these elements */
+    font-size: 0.9em; /* Smaller font size */
+}
+
+.mealImage {
+    width: 100%; /* Set width to 100% of the container */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* This will ensure the image covers the entire area */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.mealContainer {
+    text-align: center; /* Center the text below the image */
+}
+
+.availableSpots {
+    margin-top: 8px; /* Space above the available spots text */
+    font-size: 1em; /* Font size */
+    color: #0070f3; /* Color for the available spots text */
+    font-weight: bold; /* Bold for emphasis */
+}

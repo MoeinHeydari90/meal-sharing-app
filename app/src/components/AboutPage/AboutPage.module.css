@@ -1,0 +1,98 @@
+/* src/AboutPage.module.css */
+.container {
+    background-image: url("https://img.freepik.com/free-photo/raw-chicken-breast-dark-background_1220-2990.jpg?t=st=1727822172~exp=1727825772~hmac=2a4cb234aec67aab2dc103e1484a8b0f0bc3149ede190c0187b3943a14ba6c94&w=1380"); /* Ensure you set the correct path */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Fix the background image */
+    min-height: 100vh; /* Minimum height to fill the viewport */
+    display: flex; /* To align content */
+    flex-direction: column; /* Vertical alignment */
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    color: white; /* Text color */
+    text-align: left; /* Left-align text */
+    padding: 40px; /* Padding for spacing */
+    position: relative; /* To create a stacking context */
+}
+
+/* Semi-transparent overlay */
+.container::before {
+    content: ""; /* To create a semi-transparent overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+    z-index: 1; /* Layer below the text */
+}
+
+/* Title styling */
+.container h1 {
+    font-size: 3rem; /* Large font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+    margin-top: 100px; /* Space below the title */
+    z-index: 2; /* Layer above the overlay */
+    margin-left: 40%; /* Move content 40% to the right */
+}
+
+/* Paragraph styling */
+.container p {
+    font-size: 1.25rem; /* Slightly larger font size for readability */
+    line-height: 1.6; /* Line height for better spacing */
+    z-index: 2; /* Layer above the overlay */
+    max-width: 800px; /* Limit paragraph width for better readability */
+    margin-left: 40%; /* Move content 40% to the right */
+    padding: 30px;
+}
+
+/* For tablets and medium-sized screens */
+@media (max-width: 1024px) {
+    .container h1 {
+        font-size: 2.5rem;
+        margin-left: 20%; /* Reduce margin-left */
+    }
+
+    .container p {
+        font-size: 1.15rem;
+        margin-left: 20%; /* Reduce margin-left */
+    }
+}
+
+/* For small screens and mobile devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduce padding on smaller screens */
+        align-items: center; /* Center align content */
+        padding-top: 100px;
+    }
+
+    .container h1 {
+        font-size: 2rem; /* Reduce font size */
+        margin-top: 50px; /* Reduce top margin */
+        margin-left: 0; /* Center title */
+        text-align: center;
+    }
+
+    .container p {
+        font-size: 1.1rem;
+        margin-left: 0; /* Center paragraphs */
+        text-align: center;
+        padding: 20px; /* Reduce padding */
+        max-width: 90%; /* Ensure paragraphs don’t stretch too wide */
+    }
+}
+
+/* For extra small screens (mobile devices in portrait mode) */
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 1.8rem; /* Reduce font size further */
+        margin-top: 40px; /* Reduce top margin */
+    }
+
+    .container p {
+        font-size: 1rem; /* Further reduce paragraph font size */
+        line-height: 1.4; /* Adjust line height for better readability */
+        padding: 10px; /* Reduce padding */
+    }
+}

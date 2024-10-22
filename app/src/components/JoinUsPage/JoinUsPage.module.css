@@ -1,0 +1,111 @@
+/* src/JoinUsPage.module.css */
+
+.container {
+    background-image: url("https://img.freepik.com/free-photo/raw-chicken-breast-dark-background_1220-2990.jpg?t=st=1727822172~exp=1727825772~hmac=2a4cb234aec67aab2dc103e1484a8b0f0bc3149ede190c0187b3943a14ba6c94&w=1380");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center; /* Center text for consistency */
+    position: relative;
+}
+
+/* Semi-transparent overlay */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.subscriptionBox {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    z-index: 5;
+}
+
+/* Scope h2 and p styles under the subscriptionBox */
+.subscriptionBox h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.subscriptionBox p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.subscriptionForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input field styles */
+.subscriptionForm input {
+    padding: 10px; /* Consistent padding with AddMealPage */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    margin-right: 10px;
+    flex: 1;
+    transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+/* Box shadow for inputs on focus */
+.subscriptionForm input:focus {
+    box-shadow:
+        0 0 5px rgba(0, 194, 148, 0.5),
+        0 0 10px rgba(0, 194, 148, 0.3); /* Light shadow */
+    border-color: #00c194; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Box shadow for inputs on hover */
+.subscriptionForm input:hover {
+    box-shadow: 0 0 10px rgba(0, 194, 148, 0.5); /* Slightly more prominent shadow */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.5rem; /* Adjust font size for header */
+        margin-top: 150px; /* Space above the header */
+    }
+
+    .subscriptionBox {
+        max-width: 90%; /* Make subscription box wider */
+        padding: 20px; /* Adjust padding */
+    }
+}
+
+/* Extra small screens (very small mobile, max-width: 480px) */
+@media (max-width: 480px) {
+    .subscriptionBox {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .subscriptionBox h2 {
+        font-size: 1.1rem; /* Reduce heading size */
+    }
+
+    .subscriptionBox p {
+        font-size: 0.9rem; /* Reduce paragraph text size */
+    }
+}

@@ -1,0 +1,5 @@
+/* src/components/StarRating.module.css */
+.ratingContainer {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}

@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+    padding: 20px;
+    background-color: rgba(19, 19, 19, 0.6); /* Semi-transparent background */
+    color: #fff; /* White text */
+    position: fixed; /* Use fixed instead of absolute */
+    top: 0; /* Fix it to the top of the page */
+    left: 0; /* Fix it to the left of the page */
+    z-index: 10; /* Ensure it stays above other content */
+    width: 100%; /* Full width */
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center; /* Center the logo vertically */
+}
+
+.logoImage {
+    height: 50px; /* Set a height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    filter: invert(1);
+}
+
+.navList {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontal layout */
+    align-items: center; /* Center items vertically within the nav list */
+}
+
+.navList li {
+    position: relative; /* So that the pseudo-element is positioned relative to the li */
+    margin: 0 15px; /* Space between menu items */
+    cursor: pointer; /* Pointer on hover */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color */
+}
+
+.navList li::after {
+    content: ""; /* Empty content for the underline */
+    position: absolute; /* Position it absolutely within the li */
+    bottom: -5px; /* Position it slightly below the text */
+    left: 0;
+    width: 0; /* Start with no underline (hidden) */
+    height: 2px; /* Thickness of the underline */
+    background-color: #00c194; /* Color of the underline */
+    transition: width 0.3s ease-in-out; /* Smooth animation for the width */
+}
+
+.navList li:hover {
+    color: #00c194; /* Change text color on hover to match the underline */
+}
+
+.navList li:hover::after {
+    width: 100%; /* When hovered, expand the underline to full width */
+}
+
+.activeNavItem {
+    color: #00c194; /* Change color for active item */
+    font-weight: bold; /* Bold text for active item */
+}
+
+.activeNavItem::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%; /* Full width for active item */
+    height: 2px;
+    background-color: #00c194;
+}
+
+.languageSwitcher {
+    cursor: pointer; /* Pointer cursor on hover */
+    margin: 0px 20px;
+}
+
+.flagImage {
+    width: 40px; /* Width for flag image */
+    height: 40px;
+    margin-left: 15px; /* Space between flags and nav items */
+    border-radius: 85% 15% 15% 85% / 50% 50% 50% 50%; /* Rounded corners */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .navList {
+        flex-direction: row; /* Keep items in a row */
+        justify-content: center; /* Center align */
+        width: 100%; /* Full width for nav list */
+        margin-top: 10px; /* Space above nav items */
+    }
+
+    .navList li {
+        margin: 0 5px; /* Reduced space between menu items */
+    }
+}

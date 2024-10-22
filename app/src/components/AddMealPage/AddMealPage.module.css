@@ -1,0 +1,68 @@
+/* src/components/AddMealPage/AddMealPage.module.css */
+
+.container {
+    background-image: url("https://img.freepik.com/free-photo/raw-chicken-breast-dark-background_1220-2990.jpg?t=st=1727822172~exp=1727825772~hmac=2a4cb234aec67aab2dc103e1484a8b0f0bc3149ede190c0187b3943a14ba6c94&w=1380");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Make sure the container is positioned relative */
+}
+
+/* Semi-transparent overlay */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1; /* Ensure overlay is behind content but above background */
+}
+
+.header {
+    color: #fff;
+    font-size: 2rem; /* Font size for the header */
+    margin-bottom: 20px; /* Space below header */
+    z-index: 5; /* Ensure the header is above the overlay */
+    margin-top: 100px;
+}
+
+.form {
+    max-width: 800px; /* Set a maximum width for the form */
+    width: 100%; /* Allow the form to take full width */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 5; /* Ensure the form is above the overlay */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .header {
+        font-size: 1.5rem; /* Smaller font size for header */
+        margin-top: 150px;
+    }
+
+    .form {
+        padding: 15px; /* Reduce padding on form */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 1.2rem; /* Further reduce header size */
+    }
+
+    .form {
+        padding: 10px; /* Less padding for very small screens */
+    }
+}

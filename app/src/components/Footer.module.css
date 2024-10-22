@@ -1,0 +1,60 @@
+/* src/components/Footer.module.css */
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px; /* Padding around the footer */
+    margin: 0; /* Ensure no margin */
+}
+.container {
+    display: flex; /* Flex layout for footer items */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center the container */
+}
+
+.logo {
+    filter: invert(1);
+    margin-bottom: 10px; /* Space below the logo */
+}
+
+.logoImage {
+    width: 130px; /* Set a width for the logo to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.socialMedia {
+    display: flex; /* Horizontal layout for social icons */
+    justify-content: center; /* Center align icons */
+    margin: 10px 0; /* Space around social media section */
+}
+
+.socialIcon {
+    padding: 10px; /* Padding for icons */
+    margin: 0 5px; /* Space between icons */
+    border-radius: 5px;
+    transition: background-color 0.4s; /* Transition effect */
+}
+
+.socialIcon:hover {
+    background-color: #4b4b4b; /* Darker shade on hover */
+    filter: invert(1);
+}
+
+.copyRight {
+    margin-top: 10px; /* Space above copyright text */
+    font-size: 0.8rem; /* Smaller font size */
+    text-align: center; /* Center align */
+}
+
+.dividerLine {
+    width: 600px; /* Width of the divider line */
+    border-bottom: 1px solid #00c194; /* Divider line color */
+}
+
+@media (max-width: 768px) {
+    .dividerLine {
+        width: 300px; /* Width of the divider line */
+        border-bottom: 1px solid #00c194; /* Divider line color */
+    }
+}

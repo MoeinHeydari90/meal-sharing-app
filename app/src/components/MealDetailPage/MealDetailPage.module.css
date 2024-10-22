@@ -1,0 +1,110 @@
+.container {
+    max-width: 800px; /* Maximum width of the detail page */
+    margin: 0 auto; /* Center align */
+    padding: 20px; /* Padding around the content */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.header {
+    text-align: center; /* Center the header text */
+    font-size: 2rem; /* Increase the header font size */
+    margin: 100px 0 20px; /* Space above and below header */
+}
+
+.image {
+    width: 100%; /* Full width image */
+    max-width: 600px; /* Set a maximum width for the image */
+    height: 400px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area and maintains aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    display: block; /* Ensures no space below the image */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.details {
+    margin-top: 20px; /* Space above the details */
+}
+
+.details p {
+    margin: 10px 0; /* Space between paragraphs */
+    font-size: 16px; /* Font size */
+}
+
+/* Styles for the reservation form */
+.container form {
+    margin-top: 20px; /* Space above the form */
+    padding: 20px; /* Padding inside the form */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.container h2 {
+    margin-top: 20px; /* Space above the section title */
+    font-size: 1.5rem; /* Font size for section titles */
+}
+
+.reviewsSection {
+    margin-top: 20px; /* Space above the reviews section */
+    padding: 20px; /* Padding inside the reviews section */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.reviewsSection ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.reviewsSection li {
+    margin-bottom: 15px; /* Space below each review */
+    padding: 10px; /* Padding inside each review */
+    border: 1px solid #ddd; /* Light border for each review */
+    border-radius: 4px; /* Rounded corners for reviews */
+    background-color: #f9f9f9; /* Light background for reviews */
+}
+
+.reviewsSection strong {
+    display: block; /* Make the title block-level */
+    font-size: 1.2rem; /* Slightly larger font for the title */
+    margin-bottom: 5px; /* Space below the title */
+}
+
+.reviewsDate {
+    color: rgb(128, 128, 128);
+    font-size: 0.8rem; /* Adjust font size for the date */
+}
+
+.ratingContainer {
+    margin-top: 10px; /* Adds space above the rating stars */
+    margin-bottom: 20px; /* Adds space below the rating stars */
+}
+
+.reviewHeader {
+    display: flex;
+    flex-direction: column; /* Stack stars and title vertically */
+    align-items: flex-start; /* Align stars and title to the left */
+    margin-bottom: 5px; /* Space below the header */
+}
+
+.starDisplay {
+    margin-bottom: 5px; /* Add space between stars and title */
+    transform: scale(0.7); /* Scale the stars down */
+    margin-left: -20px;
+}
+@media (max-width: 768px) {
+    .header {
+        margin-top: 150px; /* Increase the margin to account for header height on small screens */
+        font-size: 1.8rem; /* Slightly smaller font size for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        margin-top: 160px; /* Further adjust margin for very small screens */
+        font-size: 1.5rem; /* Smaller font size for very small screens */
+    }
+}
